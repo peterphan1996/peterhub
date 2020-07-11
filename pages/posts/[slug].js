@@ -5,7 +5,6 @@ import Container from "../../components/container";
 import PostBody from "../../components/post-body";
 import MoreStories from "../../components/more-stories";
 import PostHeader from "../../components/post-header";
-import SectionSeparator from "../../components/section-separator";
 import Layout from "../../components/layout";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
@@ -28,6 +27,7 @@ export default function Post({ post, morePosts, preview }) {
               <Head>
                 <title>{post.title} | PeterHub Blog</title>
                 <meta property="og:image" content={post.coverImage.url} />
+                <meta property="description" content={post.excerpt} />
               </Head>
               <PostHeader
                 title={post.title}
@@ -40,7 +40,6 @@ export default function Post({ post, morePosts, preview }) {
           </>
         )}
       </Container>
-      <SectionSeparator />
       {morePosts && morePosts.length > 0 && <MoreStories posts={morePosts} />}
     </Layout>
   );

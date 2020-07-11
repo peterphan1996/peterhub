@@ -2,17 +2,34 @@
   @apply text-lg leading-relaxed;
 }
 
-.markdown p,
-.markdown ul,
-.markdown ol,
-.markdown blockquote {
+.markdown p {
   @apply my-6;
 }
 
+.markdown blockquote {
+  @apply border-l-8 border-indigo-600 pl-5;
+}
+
+.markdown a {
+  @apply text-indigo-600;
+}
+
+.markdown ul {
+  @apply list-disc pl-10;
+}
+
+.markdown ol {
+  @apply list-decimal pl-10;
+}
+
+.markdown code {
+  @apply bg-indigo-600 text-white rounded px-1 py-1;
+}
+
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-12 mb-4 leading-snug font-bold;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-8 mb-4 leading-snug font-bold;
 }

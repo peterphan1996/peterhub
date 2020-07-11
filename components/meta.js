@@ -45,6 +45,10 @@ export default function Meta() {
       />
       <meta name="og:title" content={siteTitle} />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="keywords"
+        content="peter, tech, blog, peterhub, golang, typescript, javascript, react, react native"
+      />
     </Head>
   );
 }
