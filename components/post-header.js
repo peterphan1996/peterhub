@@ -11,7 +11,7 @@ export default function PostHeader({ title, coverImage, date }) {
           <Date dateString={date} />
         </div>
       </div>
-      <div className="mb-4 md:mb-8 -mx-5 sm:mx-0">
+      <div className="mb-4 md:mb-8 mx-0">
         <CoverImage title={title} url={coverImage.url} />
       </div>
     </>

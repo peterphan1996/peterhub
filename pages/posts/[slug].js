@@ -27,7 +27,7 @@ export default function Post({ post, morePosts, preview }) {
               <Head>
                 <title>{post.title} | PeterHub Blog</title>
                 <meta property="og:image" content={post.coverImage.url} />
-                <meta property="description" content={post.excerpt} />
+                <meta name="description" content={post.excerpt} />
               </Head>
               <PostHeader
                 title={post.title}
