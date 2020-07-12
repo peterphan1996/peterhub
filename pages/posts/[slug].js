@@ -26,7 +26,10 @@ export default function Post({ post, morePosts, preview }) {
             <article className="max-w-2xl mx-auto">
               <Head>
                 <title>{post.title} | PeterHub Blog</title>
-                <meta property="og:image" content={post.coverImage.url} />
+                <meta
+                  property="og:image"
+                  content={`https:${post.coverImage.url}`}
+                />
                 <meta name="description" content={post.excerpt} />
               </Head>
               <PostHeader
