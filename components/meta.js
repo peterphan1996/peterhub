@@ -37,11 +37,7 @@ export default function Meta() {
         name="description"
         content="Welcome to Peter's tech blog, where I share with you my tech knowledge"
       />
-      <meta
-        property="og:image"
-        content="https://og-image.now.sh/**Peter's**%20Tech%20Blog.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"
-      />
-      <meta name="og:title" content={siteTitle} />
+      <meta property="og:title" content={siteTitle} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="keywords"

@@ -25,10 +25,19 @@ export default function Post({ post, morePosts, preview }) {
           <>
             <article className="max-w-2xl mx-auto">
               <Head>
-                <meta name="og:title" content={post.title} />
+                <meta
+                  property="og:url"
+                  content={`https://peterhub.dev/posts/${post.slug}`}
+                />
+                <meta property="og:title" content={post.title} />
+
                 <meta
                   property="og:image"
                   content={`https:${post.coverImage.url}`}
+                />
+                <meta
+                  property="og:image"
+                  content="https://og-image.now.sh/**Peter's**%20Tech%20Blog.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"
                 />
                 <meta name="description" content={post.excerpt} />
                 <title>{post.title} | PeterHub Blog</title>
