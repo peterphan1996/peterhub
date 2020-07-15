@@ -1,31 +1,44 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
+import { MARKS } from "@contentful/rich-text-types";
 import { defineCustomElements as deckDeckGoElement } from "@deckdeckgo/highlight-code/dist/loader";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
 import markdownStyles from "./markdown-styles.module.css";
 
 deckDeckGoElement();
 
-const options = {
-  renderNode: {
-    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-      return <CodeSnippet fields={node.data.target.fields} />;
-    },
-  },
-};
+function code(text) {
+  text.shift(); // shift first empty element
+  const language = text.shift();
 
-const CodeSnippet = ({ fields }) => {
-  delete fields.title;
+  const value = text.reduce((acc, cur, idx) => {
+    if (typeof cur !== "string" && cur.type === "br") {
+      return `${acc}${idx > 0 ? "\n" : ""}`; // Remove the first \n at every code block
+    }
+
+    return acc + cur;
+  }, "");
+
   return (
-    <div>
-      {Object.entries(fields).map(([language, code]) => {
-        return (
-          <deckgo-highlight-code language={language} key={language}>
-            <code slot="code">{code}</code>
-          </deckgo-highlight-code>
-        );
-      })}
-    </div>
+    <SyntaxHighlighter language={language} style={okaidia}>
+      {value}
+    </SyntaxHighlighter>
   );
+}
+
+export const options = {
+  renderMark: {
+    [MARKS.CODE]: code,
+  },
+
+  renderText: (text) => {
+    const res = text.split("\n").reduce((children, textSegment, index) => {
+      /* eslint-disable react/no-array-index-key */
+      return [...children, index > 0 ? <br key={index} /> : "", textSegment];
+    }, []);
+    return res;
+  },
 };
 
 export default function PostBody({ content }) {

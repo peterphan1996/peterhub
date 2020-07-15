@@ -10,27 +10,20 @@ export default function Footer() {
           <div className="flex items-center -mx-2">
             <a
               className="flex items-center mx-2 text-gray-600 hover:text-indigo-600"
-              href="#"
+              href="https://www.linkedin.com/in/phat-phan-1b3791141/"
             >
               <svg
-                className="h-5 w-5"
-                viewBox="0 0 24 24"
-                fill="none"
+                className="h-5 w-5 sm:h-6 sm:w-6 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
               >
-                <path
-                  d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                <path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z" />
               </svg>
             </a>
 
             <a
               className="flex items-center mx-2 text-gray-600 hover:text-indigo-600"
-              href="#"
+              href="https://twitter.com/peterphan_1996"
             >
               <svg
                 className="h-5 w-5 fill-current"
@@ -43,7 +36,7 @@ export default function Footer() {
 
             <a
               className="flex items-center mx-2 text-gray-600 hover:text-indigo-600"
-              href="#"
+              href="https://github.com/peterphan1996"
             >
               <svg
                 className="h-5 w-5 fill-current"
