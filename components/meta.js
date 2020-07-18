@@ -5,6 +5,21 @@ export const siteTitle = "Peter's Tech Blog";
 export default function Meta() {
   return (
     <Head>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-172954372-1"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-172954372-1');
+        `,
+        }}
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
