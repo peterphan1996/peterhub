@@ -34,6 +34,7 @@ export default function Header() {
               href="https://www.linkedin.com/in/phat-phan-1b3791141/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
             >
               <svg
                 className="h-5 w-5 sm:h-6 sm:w-6 fill-current"
@@ -49,6 +50,7 @@ export default function Header() {
               href="https://twitter.com/peterphan_1996"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Twitter"
             >
               <svg
                 className="h-5 w-5 sm:h-6 sm:w-6 fill-current"
@@ -64,6 +66,7 @@ export default function Header() {
               href="https://github.com/peterphan1996"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
             >
               <svg
                 className="h-5 w-5 sm:h-6 sm:w-6 fill-current"
