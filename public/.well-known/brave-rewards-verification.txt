@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: peterhub.dev
+Token: 99ba360de58dcf55ded41d769f6afb86fcfb54a04414cb2877e0bbdc67138c4d
